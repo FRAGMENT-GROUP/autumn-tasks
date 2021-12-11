@@ -228,4 +228,182 @@ bool digits_of_three_digit_number_decreasing_sequence(int three_digit_num){
     return false;
 }
 //task93
+bool four_digit_palindrome_number(int four_digit_num){
+    if ((four_digit_num % 10 == four_digit_num / 1000)){
+        return true;
+    }
+    if ((four_digit_num % 100 / 10 == four_digit_num % 1000 / 100)){
+        return true;
+    }
+    return false;
+}
+//task94.1
+double discriminant_(int ratio_a, int ratio_b, int ratio_c){
+    return pow(ratio_b, 2) - 4 * ratio_a * ratio_c;
+}
+//task94
+bool does_quadratic_equation_have_real_roots(int ratio_a, int ratio_b, int ratio_c){
+    if (ratio_a == 0){
+        throw "ratio_a must be != 0";
+    }
+    if (discriminant(ratio_a, ratio_b, ratio_c) > 0){
+        return true;
+    }
+    return false;
+}
+//task95
+bool does_point_lies_in_second_coordinate_quarter(int coordinate_x, int coordinate_y){
+    if (coordinate_x < 0 && coordinate_y > 0){
+        return true;
+    }
+    return false;
+}
+//task96
+bool does_point_lies_in_fourth_coordinate_quarter(int coordinate_x, int coordinate_y){
+    if (coordinate_x > 0 && coordinate_y < 0){
+        return true;
+    }
+    return false;
+}
+//task97
+bool does_point_lies_in_second_or_third_quarter(int coordinate_x, int coordinate_y){
+    if (coordinate_x < 0 && coordinate_y > 0){
+        return true;
+    }
+    if (coordinate_x < 0 && coordinate_y < 0){
+        return true;
+    }
+    return false;
+}
+//task98
+bool does_point_lies_in_first_or_third_quarter(int coordinate_x, int coordinate_y){
+    if (coordinate_x > 0 && coordinate_y > 0){
+        return true;
+    }
+    if (coordinate_x < 0 && coordinate_y < 0){
+        return true;
+    }
+    return false;
+}
+//task99
+bool does_point_lies_in_rectangle_and_sides_are_parallel_coord_axes(int coordinate_x, int coordinate_y, int coordinate_x_1, int coordinate_y_1, int coordinate_x_2, int coordinate_y_2){
+    if (coordinate_x_1 < coordinate_x &&
+        coordinate_x < coordinate_x_2 &&
+        coordinate_y_2 < coordinate_y &&
+        coordinate_y < coordinate_y_1){
+        return true;
+    }
+    return false;
+}
+//task100
+bool does_triangle_equilateral(int integer_a, int integer_b, int integer_c){
+    if ((integer_a == integer_b) &&
+        (integer_a == integer_c) &&
+        (integer_b == integer_c)){
+        return true;
+    }
+    return false;
+}
+//task101
+bool does_triangle_isosceles(int integer_a, int integer_b, int integer_c){
+    if (integer_a == integer_b){
+        return true;
+    }
+    if (integer_a == integer_c){
+        return true;
+    }
+    if (integer_b == integer_c){
+        return true;
+    }
+    return false;
+}
+//task102
+bool does_triangle_rectangular(int integer_a, int integer_b, int integer_c){
+    if (integer_a * integer_a == (integer_b * integer_b) + (integer_c * integer_c)){
+        return true;
+    }
+    if(integer_b * integer_b == (integer_a * integer_a) + (integer_c * integer_c)){
+        return true;
+    }
+    if (integer_c * integer_c == (integer_a * integer_a) + (integer_b * integer_b)){
+        return true;
+    }
+    return false;
+}
+//task103
+bool does_there_triange(int integer_a, int integer_b, int integer_c){
+    if((integer_a + integer_b > integer_c) &&
+       (integer_a + integer_c > integer_b) &&
+       (integer_b + integer_c > integer_a)){
+        return true;
+    }
+    return false;
+}
+//task104
+bool does_field_white(int coordinate_x, int coordinate_y){
+    if((coordinate_x + coordinate_y) % 2 != 0){
+        return true;
+    }
+    return false;
+}
+//task105
+bool fields_have_same_color(int coordinate_x_1, int coordinate_y_1, int coordinate_x_2, int coordinate_y_2){
+    if((coordinate_x_1 + coordinate_y_1) % 2 ==
+       (coordinate_x_2 + coordinate_y_2) % 2){
+        return true;
+    }
+    return false;
+}
+//task106
+bool does_rook_able_to_move_from_one_field_to_another_in_one_move(int coordinate_x_1, int coordinate_y_1, int coordinate_x_2, int coordinate_y_2){
+    if(coordinate_x_1 == coordinate_x_2){
+        return true;
+    }
+    if(coordinate_y_1 == coordinate_y_2){
+        return true;
+    }
+    return false;
+}
+//task107
+bool does_king_able_to_move_from_one_field_to_another_in_one_move(int coordinate_x_1, int coordinate_y_1, int coordinate_x_2, int coordinate_y_2){
+    if(abs(coordinate_x_1 - coordinate_x_2) <= 1 &&
+       abs(coordinate_y_1 - coordinate_y_2) <= 1){
+        return true;
+    }
+    return false;
+    
+}
+//task108
+bool does_elephant_able_to_move_from_one_field_to_another_in_one_move(int coordinate_x_1, int coordinate_y_1, int coordinate_x_2, int coordinate_y_2){
+    if(abs(coordinate_x_1 - coordinate_x_2) ==
+       abs(coordinate_y_1 - coordinate_y_2)){
+        return true;
+    }
+    return false;
+}
+//taks109
+bool does_queen_able_to_move_from_one_field_to_another_in_one_move(int coordinate_x_1, int coordinate_y_1, int coordinate_x_2, int coordinate_y_2){
+    if(coordinate_x_1 == coordinate_x_2){
+        return true;
+    }
+    if(coordinate_y_1 == coordinate_y_2){
+        return true;
+    }
+    if(coordinate_x_1 - coordinate_y_1 == coordinate_x_2 - coordinate_y_2){
+        return true;
+    }
+    if(coordinate_x_1 + coordinate_y_2 == coordinate_x_2 + coordinate_y_2){
+        return true;
+    }
+    return false;
+}
+//task110
+bool does_hourse_able_to_move_from_one_field_to_another_in_one_move(int coordinate_x_1, int coordinate_y_1, int coordinate_x_2, int coordinate_y_2){
+    if(abs(coordinate_x_1 - coordinate_x_2) == 1 && abs(coordinate_y_1 - coordinate_y_2) == 2){
+        return true;
+    }
+    if(abs(coordinate_x_1 - coordinate_x_2) == 2 && abs(coordinate_y_1 - coordinate_y_2) == 1){
+        return true;
+    }
+    return false;
 #endif /* boolean_h */
