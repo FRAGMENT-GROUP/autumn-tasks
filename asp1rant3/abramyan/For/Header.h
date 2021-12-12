@@ -20,9 +20,11 @@ void mission_3(int a, int b) {
 		cout << b - a - 1;
 	}
 }
-void mission_4() {
+void mission_4(double c) {
 	setlocale(LC_ALL, "");
-
+	for (int i = 1; i <= 10; i++) {
+		cout << i << c * i << endl;
+	}
 }
 void mission_5() {
 	setlocale(LC_ALL, "");
