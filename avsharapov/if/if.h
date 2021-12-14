@@ -7,6 +7,7 @@ int if_the_num_is_positive_add_1_to_num(int integer){
     }
     return integer;
 }
+
 //task112
 int if_the_num_is_positive_add_1_to_num_else_subtract_2(int integer){
     if (integer > 0){
@@ -17,6 +18,7 @@ int if_the_num_is_positive_add_1_to_num_else_subtract_2(int integer){
     }
     return integer;
 }
+
 //task113
 int if_num_is_positive_add_1_to_num_else_subtract_2_if_num_equal_0_change_on_10(int integer){
     if (integer > 0){
@@ -29,8 +31,9 @@ int if_num_is_positive_add_1_to_num_else_subtract_2_if_num_equal_0_change_on_10(
         integer = integer + 10;
     }
     else{
-        throw "you pass wrong values";
+        throw std::exception("you pass wrong values");
     }
     return integer;
 }
+
 #endif /* if_h */

@@ -28,7 +28,7 @@ double number_of_segments_b_placed_on_segment_a(int segment_a, int segments_b){
         return segment_a / segments_b;
     }
     else{
-        throw "You pass wrong values";
+        throw std::exception("You pass wrong values");
     }
 }
 
@@ -38,7 +38,7 @@ int length_of_unoccupied_part_of_segment_a(int segment_a, int segments_b){
         return segment_a % segments_b;
     }
     else{
-        throw "You pass wrong values";
+        throw std::exception("You pass wrong values");
     }
 }
 
@@ -182,7 +182,7 @@ int num_obtained_by_permuting_digits_of_tens_and_units_of_orig_num(int theree_di
 //task 57
 int number_corresponding_category_of_hundreds(int number){
     if (number <= 999){
-        throw "number must be > 999";
+        throw std::exception("number must be > 999");
     }
     return number % 1000 / 100;
 }
@@ -190,7 +190,7 @@ int number_corresponding_category_of_hundreds(int number){
 //task 58
 int number_corresponding_category_of_thousands(int number){
     if (number <= 999){
-        throw "number must be > 999";
+        throw std::exception("number must be > 999");
     }
     return number % 10000/1000;
 }
@@ -223,7 +223,7 @@ int number_of_full_minutes_have_passed_since_beginning_of_last_hour(int seconds)
 //task64
 int determine_number_of_day_of_week(int integer){
     if (integer < 1 || integer > 365){
-        throw "number must be > 1 and < 365";
+        throw std::exception("number must be > 1 and < 365");
     }
     return integer % 7;
 }
@@ -231,7 +231,7 @@ int determine_number_of_day_of_week(int integer){
 //task65
 int determine_number_of_day_of_week_starts_from_thursday(int integer){
     if (integer < 1 || integer > 365){
-        throw "number must be > 1 and < 365";
+        throw std::exception("number must be > 1 and < 365");
     }
     return (integer + 3) % 7;
 }
@@ -239,7 +239,7 @@ int determine_number_of_day_of_week_starts_from_thursday(int integer){
 //task66
 int determine_number_of_day_of_week_starts_from_tuesday(int integer){
     if (integer < 1 || integer > 365){
-        throw "number must be > 1 and < 365";
+        throw std::exception("number must be > 1 and < 365");
     }
     return  (integer % 7) + 1;
 }
@@ -247,7 +247,7 @@ int determine_number_of_day_of_week_starts_from_tuesday(int integer){
 //task67
 int determine_number_of_day_of_week_starts_from_saturday(int integer){
     if (integer < 1 || integer > 365){
-        throw "number must be > 1 and < 365";
+        throw std::exception("number must be > 1 and < 365");
     }
     return ((integer + 4) % 7) + 1;
 }
@@ -255,14 +255,14 @@ int determine_number_of_day_of_week_starts_from_saturday(int integer){
 //task68.1
 int determine_number_of_day_of_week_per_week(int days_in_year, int days_in_week){
     if (days_in_week < 1.0 || days_in_week > 7.0){
-        throw "number must be > 1 and < 7";
+        throw std::exception("number must be > 1 and < 7");
     }
     return  days_in_week - 2;
 }
 //task68.2
 int determine_number_of_day_of_week_per_year(int days_in_year, int days_in_week){
     if (days_in_year < 1 || days_in_year > 365){
-        throw "number must be > 1 and < 365";
+        throw std::exception("number must be > 1 and < 365");
     }
         
     return ((days_in_year
@@ -291,7 +291,7 @@ int number_of_squares_placed_on_rectangle(int positive_integer_a, int positive_i
 //task70
 int determine_appropriate_century_number(int number_of_certain_year){
     if (number_of_certain_year < 0){
-        throw "number must be > 0";
+        throw std::exception("number must be > 0");
     }
     return (number_of_certain_year / 100) + 1;
 }
